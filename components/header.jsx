@@ -5,22 +5,16 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import UserLoading from "./user-loading";
 import UserMenu from "./user-menu";
+import BrandLogo from "./brand-logo";
 
 async function Header() {
   //   await checkUser();
 
   return (
-    <header className="container mx-auto">
-      <nav className="py-6 px-4 flex justify-between items-center">
+    <header className="backdrop-blur-md sticky top-0 z-50 border-b border-gray-800/50">
+      <nav className="container mx-auto py-4 px-4 flex justify-between items-center">
         <Link href="/">
-          <h1 className="text-2xl font-bold flex items-center gap-2">
-            <span className="font-extrabold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent hover:from-red-400 hover:to-orange-400 transition-all duration-300">
-              Scrum
-            </span>
-            <span className="text-gray-100 font-light tracking-wider">
-              Pulse
-            </span>
-          </h1>
+          <BrandLogo as="h2" />
         </Link>
         <div className="flex items-center gap-4">
           <Link href="/project/create">
@@ -39,7 +33,6 @@ async function Header() {
           </SignedIn>
         </div>
       </nav>
-
       <UserLoading />
     </header>
   );
