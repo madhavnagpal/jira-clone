@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Management App (Jira Clone)
 
-## Getting Started
+A modern, full-stack project management application built with Next.js, offering Jira-like functionality for managing projects, sprints, and issues.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Authentication & Authorization
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Secure user authentication powered by Clerk
+- Sign in with Google
+- Email/Password authentication
+- Protected routes and API endpoints
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Organization Management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Create and manage organizations
+- Invite team members via email
+- Role-based access control
+- Organization settings and preferences
 
-## Learn More
+### Project Management
 
-To learn more about Next.js, take a look at the following resources:
+- Create multiple projects within an organization
+- Customize project settings
+- Project overview dashboard
+- Team member management at project level
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Sprint Planning
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Create time-boxed sprints with start and end dates
+- Sprint planning and backlog management
+- Sprint status tracking (Not Started, Active, Completed)
+- Sprint velocity and burndown charts
 
-## Deploy on Vercel
+### Issue Tracking
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Create and manage issues within sprints
+- Issue properties include:
+  - Title and description
+  - Priority levels
+  - Assignee management
+  - Status tracking
+  - Comments and attachments
+- Issue statuses:
+  - Todo
+  - In Progress
+  - Review
+  - Testing
+  - Done
+- Status transitions locked until sprint activation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### User Interface
+
+- Clean and modern interface using ShadcN UI
+- Responsive design for all devices
+- Drag-and-drop issue management
+- Real-time updates
+- Sprint selection dropdown
+- Filtered issue views based on sprint selection
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: Next.js 14
+- **Styling**:
+  - Tailwind CSS
+  - ShadcN UI Components
+- **Authentication**: Clerk
+- **Database**: NeonDB (PostgreSQL)
+- **ORM**: Prisma
+- **State Management**: React Context/Zustand
+- **Deployment**: Vercel
